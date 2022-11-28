@@ -23,7 +23,7 @@ function removeBook(removeTitle) {
 
 function displayCollection() {
   const bookList = document.querySelector('.book-list');
-  bookList.innerHTML="";
+  bookList.innerHTML = '';
   for (let i = 0; i < collection.length; i += 1) {
     const newBook = document.createElement('article');
     newBook.innerHTML = `
@@ -33,25 +33,21 @@ function displayCollection() {
     <hr>`;
     bookList.appendChild(newBook);
   }
-  addRemoveEvent();
+  // Add remove event to all the bottons.
+  const removeButtons = document.querySelectorAll('.remove_button');
+  removeButtons.forEach((button) => button.addEventListener('click', () => {
+    const removerTitle = button.parentElement.children[0].innerHTML;
+    removeBook(removerTitle);
+    displayCollection();
+  }));
 }
 displayCollection();
 
-var button= document.querySelector('.add_button');
-button.addEventListener('click',(event) => {
-  event.preventDefault(); 
- var title= document.querySelector('.title');
- var author= document.querySelector('.author');
- addBook(title.value,author.value);
- displayCollection();
-});
-
-function addRemoveEvent(){
-  var removeButtons= document.querySelectorAll('.remove_button');
-removeButtons.forEach(button => button.addEventListener('click',()=>{
-  const removerTitle= button.parentElement.children[0].innerHTML;
-  removeBook(removerTitle);
-  console.log(removerTitle);
+const button = document.querySelector('.add_button');
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  const title = document.querySelector('.title');
+  const author = document.querySelector('.author');
+  addBook(title.value, author.value);
   displayCollection();
-}))
-}
+});
