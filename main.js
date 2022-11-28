@@ -28,7 +28,7 @@ function addBook(newTitle, newAuthor) {
 }
 
 function removeBook(removeBook) {
-  collection.pop(Array.prototype.indexOf.call(removeBook.parentElement.children, removeBook));
+  collection.splice(Array.prototype.indexOf.call(removeBook.parentElement.children, removeBook), 1);
 }
 
 function displayCollection() {
