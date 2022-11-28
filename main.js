@@ -1,4 +1,4 @@
-const collection = [
+let collection = [
   {
     title: 'Lorem ipsum',
     author: 'Testeroo Testyy',
@@ -8,3 +8,16 @@ const collection = [
     author: 'Testeroo Testyy',
   },
 ];
+
+function addBook(newTitle, newAuthor) {
+  const newBook = {
+    title: newTitle,
+    author: newAuthor,
+  };
+  collection.push(newBook);
+}
+
+function removeBook(removeTitle) {
+  const updatedCollection = collection.filter((book) => book.title !== removeTitle);
+  collection = updatedCollection;
+}
