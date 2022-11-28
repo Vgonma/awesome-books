@@ -29,18 +29,29 @@ function displayCollection() {
     newBook.innerHTML = `
     <p class="book-title">${collection[i].title}</p>
     <p class="book-author">${collection[i].author}</p>
-    <button>Remove</button>
+    <button class="remove_button">Remove</button>
     <hr>`;
     bookList.appendChild(newBook);
   }
+  addRemoveEvent();
 }
 displayCollection();
 
 var button= document.querySelector('.add_button');
 button.addEventListener('click',(event) => {
-  event.preventDefault();
+  event.preventDefault(); 
  var title= document.querySelector('.title');
  var author= document.querySelector('.author');
  addBook(title.value,author.value);
  displayCollection();
 });
+
+function addRemoveEvent(){
+  var removeButtons= document.querySelectorAll('.remove_button');
+removeButtons.forEach(button => button.addEventListener('click',()=>{
+  const removerTitle= button.parentElement.children[0].innerHTML;
+  removeBook(removerTitle);
+  console.log(removerTitle);
+  displayCollection();
+}))
+}
