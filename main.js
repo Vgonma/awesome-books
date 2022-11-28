@@ -18,12 +18,12 @@ function addBook(newTitle, newAuthor) {
 }
 
 function removeBook(removeTitle) {
-  const updatedCollection = collection.filter((book) => book.title !== removeTitle);
-  collection = updatedCollection;
+  collection = collection.filter((book) => book.title !== removeTitle);
 }
 
 function displayCollection() {
   const bookList = document.querySelector('.book-list');
+  bookList.innerHTML="";
   for (let i = 0; i < collection.length; i += 1) {
     const newBook = document.createElement('article');
     newBook.innerHTML = `
@@ -34,4 +34,13 @@ function displayCollection() {
     bookList.appendChild(newBook);
   }
 }
+displayCollection();
 
+var button= document.querySelector('.add_button');
+button.addEventListener('click',(event) => {
+  event.preventDefault();
+ var title= document.querySelector('.title');
+ var author= document.querySelector('.author');
+ addBook(title.value,author.value);
+ displayCollection();
+});
