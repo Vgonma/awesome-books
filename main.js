@@ -9,6 +9,16 @@ let collection = [
   },
 ];
 
+function saveLocalStorage() {
+  localStorage.setItem('collection', JSON.stringify(collection));
+}
+
+function loadLocalStorage() {
+  if (JSON.parse(localStorage.getItem('collection'))) {
+    collection = JSON.parse(localStorage.getItem('collection'));
+  }
+}
+
 function addBook(newTitle, newAuthor) {
   const newBook = {
     title: newTitle,
@@ -33,6 +43,7 @@ function displayCollection() {
     <hr>`;
     bookList.appendChild(newBook);
   }
+  saveLocalStorage();
   // Add remove event to all the bottons.
   const removeButtons = document.querySelectorAll('.remove_button');
   removeButtons.forEach((button) => button.addEventListener('click', () => {
@@ -41,6 +52,7 @@ function displayCollection() {
     displayCollection();
   }));
 }
+loadLocalStorage();
 displayCollection();
 
 const button = document.querySelector('.add_button');
