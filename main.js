@@ -27,8 +27,8 @@ function addBook(newTitle, newAuthor) {
   collection.push(newBook);
 }
 
-function removeBook(removeTitle) {
-  collection = collection.filter((book) => book.title !== removeTitle);
+function removeBook(removeBook) {
+  collection.pop(Array.prototype.indexOf.call(removeBook.parentElement.children, removeBook));
 }
 
 function displayCollection() {
@@ -47,8 +47,7 @@ function displayCollection() {
   // Add remove event to all the bottons.
   const removeButtons = document.querySelectorAll('.remove_button');
   removeButtons.forEach((button) => button.addEventListener('click', () => {
-    const removerTitle = button.parentElement.children[0].innerHTML;
-    removeBook(removerTitle);
+    removeBook(button.parentElement);
     displayCollection();
   }));
 }
