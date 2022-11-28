@@ -20,6 +20,7 @@ function loadLocalStorage() {
 }
 
 function addBook(newTitle, newAuthor) {
+  if (!newTitle || !newAuthor) return;
   const newBook = {
     title: newTitle,
     author: newAuthor,
@@ -29,6 +30,7 @@ function addBook(newTitle, newAuthor) {
 
 function removeBook(removeBook) {
   collection.splice(Array.prototype.indexOf.call(removeBook.parentElement.children, removeBook), 1);
+  console.log(collection);
 }
 
 function displayCollection() {
