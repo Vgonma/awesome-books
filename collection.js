@@ -3,7 +3,16 @@ export default class Collection {
     this.collection = [];
   }
 
-  addBook(book) {
+  populateCollection(array) {
+    if (!array) { return; }
+    this.collection = array;
+  }
+
+  insertBook(book) {
     this.collection.push(book);
+  }
+
+  removeBook(index) {
+    this.collection.splice(index, 1);
   }
 }

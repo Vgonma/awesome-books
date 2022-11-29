@@ -1,8 +1,10 @@
 {
+  
   "name": "awesome-books",
   "version": "1.0.0",
   "description": "A website that lets you add and remove books from a list.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
