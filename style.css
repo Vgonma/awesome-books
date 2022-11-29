@@ -1,3 +1,46 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+section {
+  margin: 7%;
+}
+
+.book-list {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.book {
+  display: flex;
+  justify-content: flex-start;
+  background-color: lightblue;
+  margin: 5px;
+  padding: 20px;
+}
+
+.book:nth-child(even) {
+  background-color: white;
+}
+
+.book > button {
+  justify-self: flex-end;
+  margin-right: 10px;
+  margin-left: auto;
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.book > p {
+  padding: 5px;
 }

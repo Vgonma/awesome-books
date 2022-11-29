@@ -20,6 +20,7 @@ function displayCollection() {
   bookList.innerHTML = '';
   for (let i = 0; i < lib.collection.length; i += 1) {
     const newBook = document.createElement('article');
+    newBook.classList.add('book');
     newBook.innerHTML = `
     <p class="book-title">${lib.collection[i].title}</p>
     <p class="book-author">${lib.collection[i].author}</p>
