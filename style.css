@@ -44,3 +44,35 @@ section {
 .book > p {
   padding: 5px;
 }
+
+hr {
+  width: 40%;
+  margin: auto;
+  border-color: black;
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 10px;
+}
+
+input {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.add_button {
+  width: 80px;
+  padding: 3px;
+  margin-left: auto;
+  box-shadow: 5px 5px 5px black;
+}
