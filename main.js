@@ -47,21 +47,16 @@ button.addEventListener('click', (event) => {
   const author = document.querySelector('.author');
   if (title.value && author.value) {
     lib.insertBook(new Book(title.value, author.value));
+    title.value = '';
+    author.value = '';
   }
   displayCollection();
 });
 
-function formatDate(date) {
-  return [
-    date.getMonth() + 1,
-    date.getDate(),
-    date.getFullYear(),
-  ].join('-');
-}
-function displayDate() {
-  document.querySelector('.nav-date').innerHTML = formatDate(new Date());
-}
-document.querySelector('.nav-date').onload = displayDate();
+const date = document.createElement('div');
+date.classList.add('nav-date');
+date.innerHTML = new Date().toDateString();
+document.querySelector('.nav-container').appendChild(date);
 
 const navList = document.querySelectorAll('.nav-li');
 navList.forEach((li) => {
