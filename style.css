@@ -48,7 +48,7 @@ h1 {
 }
 
 section {
-  margin: 7%;
+  margin: 4em;
 }
 
 .book-list {
@@ -134,4 +134,13 @@ input {
   margin: 3px;
   padding: 5px;
   background-color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.nav-active {
+  font-weight: bolder;
+  background-color: lightblue;
 }

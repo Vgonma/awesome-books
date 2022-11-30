@@ -62,3 +62,11 @@ function displayDate() {
   document.querySelector('.nav-date').innerHTML = formatDate(new Date());
 }
 document.querySelector('.nav-date').onload = displayDate();
+
+const navList = document.querySelectorAll('.nav-li');
+navList.forEach((li) => {
+  li.addEventListener('click', () => {
+    navList.forEach((i) => { i.classList.remove('nav-active'); });
+    li.classList.add('nav-active');
+  });
+});

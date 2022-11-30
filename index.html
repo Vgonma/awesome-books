@@ -12,20 +12,20 @@
     <nav class="nav-bar">
       <h3 class="nav-title">Awesome Books</h3>
       <ul class="nav-list">
-        <li class="nav-li">List</li>
-        <li class="nav-li">Add New</li>
-        <li class="nav-li">Contact</li>
+        <li id="nav-book-list" class="nav-li nav-active">List</li>
+        <li id="nav-add" class="nav-li">Add New</li>
+        <li id="nav-contact" class="nav-li">Contact</li>
       </ul>
     </nav>
     <div class="nav-date" onclick=displayDate()>Here goes the date</div>
   </header>
-  <section>
+  <section class="book-section">
     <h2>Awesome Books</h2>
     <div class="book-list">
     <!-- add books through javascript -->
       </div>
   </section>
-  <section>
+  <section class="add-book-section hide">
     <h2>Add New Books</h2>
     <form onsubmit="return false;">
       <input class="title" type="text" placeholder="Title" required>
@@ -33,7 +33,7 @@
       <button type="submit" class="add_button"> Add</button>
     </form>
   </section>
-  <section class="info_section">
+  <section class="info_section hide">
     <h2>Contact Information</h2>
     <p class="info_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, id!
       <br> You can reach out to us!
