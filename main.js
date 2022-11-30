@@ -24,8 +24,7 @@ function displayCollection() {
     newBook.innerHTML = `
     <p class="book-title">${lib.collection[i].title}</p>
     <p class="book-author">${lib.collection[i].author}</p>
-    <button class="remove_button">Remove</button>
-    <hr>`;
+    <button class="remove_button">Remove</button>`;
     bookList.appendChild(newBook);
   }
   saveLocalStorage();
