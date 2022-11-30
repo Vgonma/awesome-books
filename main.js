@@ -24,8 +24,7 @@ function displayCollection() {
     newBook.innerHTML = `
     <p class="book-title">${lib.collection[i].title}</p>
     <p class="book-author">${lib.collection[i].author}</p>
-    <button class="remove_button">Remove</button>
-    <hr>`;
+    <button class="remove_button">Remove</button>`;
     bookList.appendChild(newBook);
   }
   saveLocalStorage();
@@ -48,6 +47,26 @@ button.addEventListener('click', (event) => {
   const author = document.querySelector('.author');
   if (title.value && author.value) {
     lib.insertBook(new Book(title.value, author.value));
+    title.value = '';
+    author.value = '';
   }
   displayCollection();
+});
+
+const date = document.createElement('div');
+date.classList.add('nav-date');
+date.innerHTML = new Date().toDateString();
+document.querySelector('.nav-container').appendChild(date);
+
+const navList = document.querySelectorAll('.nav-li');
+navList.forEach((li) => {
+  li.addEventListener('click', () => {
+    navList.forEach((i) => { i.classList.remove('nav-active'); });
+    li.classList.add('nav-active');
+    const sectionList = document.querySelectorAll('section');
+    sectionList.forEach((sec) => { sec.classList.add('hide'); });
+    sectionList [
+      Array.prototype.indexOf.call(li.parentElement.children, li)
+    ].classList.remove('hide');
+  });
 });

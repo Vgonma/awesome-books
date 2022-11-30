@@ -5,14 +5,50 @@
   font-family: sans-serif;
 }
 
+.nav-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.nav-bar {
+  margin: 3px;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  padding: 4px 10px;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-li {
+  padding: 3px 5px;
+  border-right: 1px solid grey;
+  cursor: pointer;
+}
+
+.nav-li:last-child {
+  border: none;
+}
+
+.nav-date {
+  padding: 3px 10px;
+  text-align: right;
+}
+
 h1 {
   width: 100%;
   text-align: center;
+  margin-top: 1.5em;
   padding-top: 20px;
 }
 
 section {
-  margin: 7%;
+  margin: 4em;
 }
 
 .book-list {
@@ -75,4 +111,36 @@ input {
   padding: 3px;
   margin-left: auto;
   box-shadow: 5px 5px 5px black;
+}
+
+.info_p {
+  max-width: 600px;
+  margin: auto;
+}
+
+.info_list {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  padding-left: 50px;
+}
+
+.info_list > li {
+  padding: 5px;
+}
+
+.copyright {
+  border: 1px solid black;
+  margin: 3px;
+  padding: 5px;
+  background-color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.nav-active {
+  font-weight: bolder;
+  background-color: lightblue;
 }

@@ -8,22 +8,44 @@
   <title>Awesome Books</title>
 </head>
 <body>
-  <h1>Awesome Books</h1>
-  <section class="book-list">
+  <header class="nav-container">
+    <nav class="nav-bar">
+      <h3 class="nav-title">Awesome Books</h3>
+      <ul class="nav-list">
+        <li id="nav-book-list" class="nav-li nav-active">List</li>
+        <li id="nav-add" class="nav-li">Add New</li>
+        <li id="nav-contact" class="nav-li">Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <section class="book-section">
+    <h2>Awesome Books</h2>
+    <div class="book-list">
     <!-- add books through javascript -->
-    <hr>
+      </div>
   </section>
-  <hr>
-  <section>
-    <title>
-      <h2>Add New Books</h2>
-    </title>
-    <form action="">
+  <section class="add-book-section hide">
+    <h2>Add New Books</h2>
+    <form onsubmit="return false;">
       <input class="title" type="text" placeholder="Title" required>
       <input class="author" type="text" placeholder="Author" required>
       <button type="submit" class="add_button"> Add</button>
     </form>
   </section>
+  <section class="info_section hide">
+    <h2>Contact Information</h2>
+    <p class="info_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, id!
+      <br> You can reach out to us!
+    </p>
+    <ul class="info_list">
+      <li>Our E-mail: mail@mail.com</li>
+      <li>Our Phone: 123555111</li>
+      <li>Our Address Street 22, 84503 City, Country.</li>
+    </ul>
+  </section>
+  <footer>
+    <p class="copyright">Copyright  ...</p>
+  </footer>
   <script type="module" src="main.js"></script>
 </body>
 </html>
