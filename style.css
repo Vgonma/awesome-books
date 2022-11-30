@@ -5,9 +5,45 @@
   font-family: sans-serif;
 }
 
+.nav-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.nav-bar {
+  margin: 3px;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  padding: 4px 10px;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-li {
+  padding: 3px 5px;
+  border-right: 1px solid grey;
+  cursor: pointer;
+}
+
+.nav-li:last-child {
+  border: none;
+}
+
+.nav-date {
+  padding: 3px 10px;
+  text-align: right;
+}
+
 h1 {
   width: 100%;
   text-align: center;
+  margin-top: 1.5em;
   padding-top: 20px;
 }
 

@@ -50,3 +50,15 @@ button.addEventListener('click', (event) => {
   }
   displayCollection();
 });
+
+function formatDate(date) {
+  return [
+    date.getMonth() + 1,
+    date.getDate(),
+    date.getFullYear(),
+  ].join('-');
+}
+function displayDate() {
+  document.querySelector('.nav-date').innerHTML = formatDate(new Date());
+}
+document.querySelector('.nav-date').onload = displayDate();
