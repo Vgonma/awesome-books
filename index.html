@@ -19,20 +19,34 @@
     </nav>
     <div class="nav-date" onclick=displayDate()>Here goes the date</div>
   </header>
-  <h1>Awesome Books</h1>
-  <section class="book-list">
+  <section>
+    <h2>Awesome Books</h2>
+    <div class="book-list">
     <!-- add books through javascript -->
-    <hr>
+      </div>
   </section>
-  <hr>
   <section>
     <h2>Add New Books</h2>
-    <form action="">
+    <form onsubmit="return false;">
       <input class="title" type="text" placeholder="Title" required>
       <input class="author" type="text" placeholder="Author" required>
       <button type="submit" class="add_button"> Add</button>
     </form>
   </section>
+  <section class="info_section">
+    <h2>Contact Information</h2>
+    <p class="info_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, id!
+      <br> You can reach out to us!
+    </p>
+    <ul class="info_list">
+      <li>Our E-mail: mail@mail.com</li>
+      <li>Our Phone: 123555111</li>
+      <li>Our Address Street 22, 84503 City, Country.</li>
+    </ul>
+  </section>
+  <footer>
+    <p class="copyright">Copyright  ...</p>
+  </footer>
   <script type="module" src="main.js"></script>
 </body>
 </html>

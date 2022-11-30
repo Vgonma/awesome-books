@@ -112,3 +112,26 @@ input {
   margin-left: auto;
   box-shadow: 5px 5px 5px black;
 }
+
+.info_p {
+  max-width: 600px;
+  margin: auto;
+}
+
+.info_list {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  padding-left: 50px;
+}
+
+.info_list > li {
+  padding: 5px;
+}
+
+.copyright {
+  border: 1px solid black;
+  margin: 3px;
+  padding: 5px;
+  background-color: white;
+}
