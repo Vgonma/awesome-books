@@ -68,5 +68,10 @@ navList.forEach((li) => {
   li.addEventListener('click', () => {
     navList.forEach((i) => { i.classList.remove('nav-active'); });
     li.classList.add('nav-active');
+    const sectionList = document.querySelectorAll('section');
+    sectionList.forEach((sec) => { sec.classList.add('hide'); });
+    sectionList [
+      Array.prototype.indexOf.call(li.parentElement.children, li)
+    ].classList.remove('hide');
   });
 });
